@@ -4,6 +4,13 @@ function Zeige_Uhrzeit () {
     strip.setPixelColor(Sekunde / 2.5 + 12, neopixel.colors(NeoPixelColors.Blue))
     strip.show()
 }
+function Berechne_Am_Pm () {
+    if (Stunde >= 12) {
+        basic.showString("PM")
+    } else {
+        basic.showString("AM")
+    }
+}
 function Berechne_Uhrzeit () {
     Sekunde = Sekunde + 1
     if (Sekunde > 59) {
@@ -30,4 +37,5 @@ basic.forever(function () {
     basic.pause(1000)
     Berechne_Uhrzeit()
     Zeige_Uhrzeit()
+    Berechne_Am_Pm()
 })
