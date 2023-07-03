@@ -45,6 +45,7 @@ basic.showLeds(`
     # . . . #
     . # # # .
     `)
+basic.showIcon(IconNames.Heart)
 basic.pause(2000)
 strip = neopixel.create(DigitalPin.P12, 24, NeoPixelMode.RGB)
 Stunde = 0
